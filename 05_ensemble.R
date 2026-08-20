@@ -11,8 +11,8 @@ library(vegan)
 
 # Working directory
 path <- "G:/My Drive/UMississippi/amphibian_data"
-path_in <- file.path(path, "04_algorithms_30")
-path_out <- file.path(path, "05_ensemble_30")
+path_in <- file.path(path, "04_algorithms")
+path_out <- file.path(path, "05_ensemble")
 
 if(!dir.exists(path_out)) dir.create(path_out, recursive = TRUE)
 
