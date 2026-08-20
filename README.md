@@ -75,8 +75,7 @@ amphibian_data/
 ├── 04_algorithms/           # Algorithm predictions, evaluations, and importance scores
 ├── 05_ensemble/             # Weighted ensemble raster outputs
 ├── 06_binary/               # Binary MAX_TSS thresholded maps
-├── 07_maps/                 # Study area buffers and protected areas (GPKG)
-├── 08_spatial_analysis/     # Spatial maps 
-└── 09_stats/                # Final summary tables, forest plots, and variable importance figures
+├── 07_spatial_analysis/     # Spatial maps 
+└── 08_stats/                # Final summary tables, forest plots, and variable importance figures
 
 ```
