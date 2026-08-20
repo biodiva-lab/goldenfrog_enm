@@ -10,8 +10,8 @@ library(biomod2)
 
 # PATH CONFIGURATIONS
 path <- "G:/My Drive/UMississippi/amphibian_data"
-path_ens <- file.path(path, "05_ensemble_30")
-path_bin <- file.path(path, "06_binary_30")
+path_ens <- file.path(path, "05_ensemble")
+path_bin <- file.path(path, "06_binary")
 dir.create(path_bin, showWarnings = FALSE, recursive = TRUE)
 
 # 1. Occurrence data
@@ -22,7 +22,7 @@ occ_pts$presabs <- 1
 # 2. List all Ensembles ('ensemble_' pattern)
 ens_files <- list.files(path_ens, pattern = "^ensemble_.*Atelopus.*\\.tif$", full.names = TRUE)
 
-if(length(ens_files) == 0) stop("No 'ensemble_' files found in 05_ensemble_30!")
+if(length(ens_files) == 0) stop("No 'ensemble_' files found in 05_ensemble!")
 
 # Identify base scenarios (removing prefix, time suffixes, and species)
 # Ex: transforms 'ensemble_acc17_infected_present_Atelopus_zeteki' into 'acc17_infected'
@@ -116,4 +116,4 @@ for(scen in scenarios) {
   }
 }
 
-message("\n🎉 COMPLETED! All binary maps are located in: 06_binary_30")
+message("\n🎉 COMPLETED! All binary maps are located in: 06_binary")
