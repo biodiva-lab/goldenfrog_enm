@@ -11,10 +11,10 @@ library(multcomp)
 library(tidytext)
 
 path <- "G:/My Drive/UMississippi/amphibian_data"
-path_alg <- file.path(path, "04_algorithms_30")
-path_ens <- file.path(path, "05_ensemble_30")
-path_stats <- file.path(path, "09_stats_30")
-path_bin <- file.path(path, "06_binary_30")
+path_alg <- file.path(path, "04_algorithms")
+path_ens <- file.path(path, "05_ensemble")
+path_stats <- file.path(path, "08_stats")
+path_bin <- file.path(path, "06_binary")
 dir.create(path_stats, showWarnings = FALSE, recursive = TRUE)
 
 #  1. AUC FILTER 
@@ -147,7 +147,7 @@ ggsave(file.path(path_stats, "ForestPlot.png"), fig_forest, width = 11, height =
 message(">>> Generating PAs Analysis...")
 
 # 1. Load Protected Areas (PAs) and Binary Rasters
-ucs_sf <- st_read(file.path(path, "07_maps_30/pa_allpoints.gpkg"))
+ucs_sf <- st_read(file.path(path, "07_maps/pa_allpoints.gpkg"))
 bin_files <- list.files(path_bin, pattern = "MAX_TSS\\.tif$", full.names = TRUE)
 
 # 2. Extract total valid pixels per PA (Denominator)
@@ -247,7 +247,7 @@ tab_pa_summary <- df_slope %>%
 
 write_csv(tab_pa_summary, file.path(path_stats, "Table_ProtectedAreas_Summary.csv"))
 
-message("✅ TABLES SAVED! Check folder 09_stats_30:")
+message("✅ TABLES SAVED! Check folder 08_stats:")
 message("- Table_Variable_Importance_Full.csv")
 message("- Table_LMM_ForestPlot_Results.csv")
 message("- Table_ProtectedAreas_Summary.csv")
