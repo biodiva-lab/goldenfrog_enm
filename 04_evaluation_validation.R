@@ -8,7 +8,7 @@ library(wesanderson)
 
 # Paths
 path <- "G:/My Drive/UMississippi/amphibian_data"
-path_input <- file.path(path, "04_algorithms_30")
+path_input <- file.path(path, "04_algorithms")
 
 
 # 1. AUTOMATIC IMPORT
