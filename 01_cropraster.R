@@ -8,10 +8,10 @@ library(sf)
 
 # 1. Load the buffer
 path <- "G:/My Drive/UMississippi/amphibian_data"
-area <- st_read(file.path(path, "07_maps_30/buffer_accessible_area_allpoints.gpkg"))
+area <- st_read(file.path(path, "buffer_accessible_area_allpoints.gpkg"))
 
 # 2. List all rasters (including the ones just generated)
-base_dir <- file.path(path, "03_var_30")
+base_dir <- file.path(path, "03_var")
 rasters <- list.files(base_dir, pattern = "\\.tif$", recursive = TRUE, full.names = TRUE)
 
 # Remove files that have already been cropped previously to avoid processing twice
