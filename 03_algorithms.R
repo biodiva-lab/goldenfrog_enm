@@ -14,11 +14,11 @@ library(maxnet)
 
 # --- PATH CONFIGURATIONS ---
 path <- "G:/My Drive/UMississippi/amphibian_data"
-path_vars <- file.path(path, "03_var_30")
-path_out <- file.path(path, "04_algorithms_30")
+path_vars <- file.path(path, "03_var")
+path_out <- file.path(path, "04_algorithms")
 
 # Buffer for automated cropping
-path_mask <- file.path(path, "07_maps_30/buffer_accessible_area_allpoints.gpkg")
+path_mask <- file.path(path, "buffer_accessible_area_allpoints.gpkg")
 shape_mask <- sf::st_read(path_mask)
 
 occ <- readr::read_csv(file.path(path, "02_occ/coord_atelopus_clean.csv"))
